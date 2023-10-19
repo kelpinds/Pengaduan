@@ -24,6 +24,9 @@ Route::prefix('admin')->group(function(){
     Route::get('login',[AdminController::class,'login']);
     Route::post('login',[AdminController::class,'ceklogin']);
     Route::get('logout',[AdminController::class,'logout']);
+    Route::get('register',[AdminController::class,'register']);
+    Route::post('register',[AdminController::class,'data']);
+    Route::get('pengaduan',[AdminController::class,'pengaduan']);
 });
 
 // Route masyarakat
