@@ -27,6 +27,7 @@ Route::prefix('admin')->group(function(){
     Route::get('register',[AdminController::class,'register']);
     Route::post('register',[AdminController::class,'data']);
     Route::get('pengaduan',[AdminController::class,'pengaduan']);
+
 });
 
 // Route masyarakat
