@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pengaduan | pengaduan</title>
+    <title>Pengaduan | Masyarakat</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
 </head>
@@ -53,20 +53,7 @@
                                     </div>
                                 @enderror
                             </div>
-                            <div class="mb-3">
-                                <label for="combobox" class="form-label">Status</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Status</option>
-                                    <option value="1">Selesai</option>
-                                    <option value="2">Peroses</option>
-                                    <option value="3"></option>
-                                  </select>
-                                  @error('status')
-                                  <div class="form-text">
-                                      {{ $message }}
-                                  </div>
-                              @enderror
-                            </div>
+                           
                             <div class="mb-3">
                                 <label for="isi_laporan" class="form-label">Isi Laporan</label>
                                 <textarea class="form-control" name="isi_laporan" id="isi_laporan" rows="3"></textarea>

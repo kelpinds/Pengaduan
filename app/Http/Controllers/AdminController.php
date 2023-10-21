@@ -30,16 +30,16 @@ class AdminController extends Controller
         return back();
     }
     public function register(){
-        return view("Masyarakat.registrasi");
+        return view("Administrator.registrasi");
     }
     public function data(Request $request){
-        $c = new Masyarakat();
+        $c = new Petugas();
         $cek = $request->validate([
-            'nik' => 'required|unique:masyarakat|max:16',
-            'nama' => 'required',
+            'nama_petugas' => 'required|max:16',
             'username' => 'required|min:6',
             'password' => 'required|min:4',
-            'tepl' => 'required|max:13'
+            'telp' => 'required|max:13',
+            'level' => 'required'
         ]);
         $c->create($request->all());
        
@@ -49,6 +49,11 @@ class AdminController extends Controller
     }
     public function pengaduan()
     {
-        return view('Masyarakat.pengaduan');
+        return view('Administrator.pengaduan');
     }
+    public function validasi(){
+        return view('Administrator.validasi');
+
+    }
+
 }
