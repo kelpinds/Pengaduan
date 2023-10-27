@@ -9,5 +9,10 @@ class Petugas extends Model
 {
     use HasFactory;
 
-    public $guarded=[];
+    protected $table = "petugas";
+
+    protected $primaryKey = "id";
+    public $incrementing="false";
+    protected $keyType = "string";
+    protected $guarded=[];
 }

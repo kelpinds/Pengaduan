@@ -40,6 +40,7 @@ Route::prefix('masyarakat')->group(function(){
     Route::get('register',[MasyarakatController::class,'register']);
     Route::post('register',[MasyarakatController::class,'data']);
     Route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
+    Route::post('pengaduan',[MasyarakatController::class,'cekpengaduan']);
     
 });
 

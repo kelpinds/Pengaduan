@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Pengaduan extends Model
 {
     use HasFactory;
-    public $guarded=[];
+
+    protected $table = "pengaduans";
+
+    protected $primaryKey = "id";
+    public $incrementing="false";
+    protected $keyType = "string";
+    protected $guarded=[];
 }

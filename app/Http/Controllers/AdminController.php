@@ -49,10 +49,11 @@ class AdminController extends Controller
     }
     public function pengaduan()
     {
-        return view('Administrator.pengaduan');
+        return view('Masyarakat.pengaduan');
     }
     public function validasi(){
-        return view('Administrator.validasi');
+        $lapor = new pengaduan;
+        return view('Administrator.validasi',['data'=>$lapor->all()]);
 
     }
 

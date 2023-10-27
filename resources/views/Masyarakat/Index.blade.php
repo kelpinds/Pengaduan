@@ -1,4 +1,4 @@
-@extends('Masyarakat.LayoutMasyarakat')
+@extends('LayoutMasyarakat')
 
 @section('title')
     Laporkan

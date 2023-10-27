@@ -21,24 +21,24 @@
                     @endif
                     @if ($errors->any())
                         <div class="alert alert-success" role="alert">
-                            Anda gagal registrasi
+                            Silahkan isi semua kolom!!!
                         </div>
                     @endif
-                    <form action="{{ url('laporan') }}" method="POST">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="nik" class="form-label">NIK</label>
-                            <input type="text" class="form-control" name="nik" id="nik" placeholder="NIK">
+                            <input type="text" class="form-control" name="nik" id="nik" placeholder="nik">
                             @error('nik')
                                 <div class="form-text">
                                     {{ $message }}
                                 </div>
                             @enderror
                             <div class="mb-3">
-                                <label for="tanggal_pengaduan" class="form-label">Tanggal Pengaduan</label>
-                                <input type="date" class="form-control" name="tanggal_pengaduan" id="nama"
-                                    placeholder="tanggal_pengaduan">
-                                @error('tanggal_pengaduan')
+                                <label for="tgl_pengaduan" class="form-label">Tanggal Pengaduan</label>
+                                <input type="date" class="form-control" name="tgl_pengaduan" id="tgl_pengaduan"
+                                    placeholder="tgl_pengaduan">
+                                @error('tgl_pengaduan')
                                     <div class="form-text">
                                         {{ $message }}
                                     </div>

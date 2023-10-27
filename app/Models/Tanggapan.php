@@ -9,5 +9,10 @@ class Tanggapan extends Model
 {
     use HasFactory;
 
-    public $guarded=[];
+    protected $table = "tanggapans";
+
+    protected $primaryKey = "id";
+    public $incrementing="false";
+    protected $keyType = "string";
+    protected $guarded=[];
 }

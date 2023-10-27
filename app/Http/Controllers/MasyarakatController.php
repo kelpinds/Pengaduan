@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Masyarakat;
+use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 
 class MasyarakatController extends Controller
@@ -48,6 +49,28 @@ class MasyarakatController extends Controller
     public function pengaduan()
     {
         return view('Masyarakat.pengaduan');
+    }
+    public function cekpengaduan(Request $request){
+        //  $foto = $request->file('foto');
+
+        //  $folder = 'upload';
+
+        //  $foto->move($folder,$foto->getClientOriginalName());
+        $s = $request->validate([
+            'nik'=>'required|max:16',
+            'tgl_pengaduan'=>'required|date',
+            'foto'=>'required',
+            'isi_laporan'=>'required'
+        ]);
+        $k =new Pengaduan();
+        $k->create([
+            'nik'=>$request->nik,
+            'tgl_pengaduan'=>$request->tgl_pengaduan,
+            'foto'=>$request->foto,
+            'isi_laporan'=>$request->isi_laporan
+        ]);
+        return back()->with('pesan','laporan berhasil dikirim');
+        
     }
     public function layout(){
         return view('Masyarakat.LayoutMasyarakat');

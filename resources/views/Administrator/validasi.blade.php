@@ -1,4 +1,4 @@
-@extends('LayoutMasyarakat')
+@extends('LayoutAdmin')
 
 @section('content')
     <div class="container">
@@ -18,11 +18,10 @@
                             <tbody>
                                 @foreach ($data as $item)
                                     
-                                @endforeach
                                 <tr>
-                                    <td>{{$item->id_pengaduan}}</td>
+                                    <td>{{$item->id}}</td>
                                     <td>{{$item->nik}}</td>
-                                    <td>{{$item->tanggal_pengaduan}}</td>
+                                    <td>{{$item->tgl_pengaduan}}</td>
                                     <td>{{$item->isi_laporan}}</td>
                                     <td>
                                         <div class="d-flax gap-2 mb-2">
@@ -30,6 +29,8 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
+
                             </tbody>
                         </thead>
                     </table>
