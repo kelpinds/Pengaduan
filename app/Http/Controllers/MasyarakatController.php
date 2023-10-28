@@ -32,18 +32,25 @@ class MasyarakatController extends Controller
         return view("Masyarakat.registrasi");
     }
     public function data(Request $request){
-        $c = new Masyarakat();
+       
         $cek = $request->validate([
-            'nik' => 'required|unique:masyarakat|max:16',
+            'nik' => 'required|max:16',
             'nama' => 'required',
             'username' => 'required|min:6',
             'password' => 'required|min:4',
-            'tepl' => 'required|max:13'
+            'telp' => 'required|max:13'
         ]);
-        $c->create($request->all());
+        $c = new Masyarakat();
+        $c->create([
+            'nik'=>$request->nik,
+            'nama'=>$request->nama,
+            'username'=>$request->username,
+            'password'=>$request->password,
+            'telp'=>$request->telp
+        ]);
        
-    
-        return back()->with('Pesan', 'anda berasil registrasi');
+        return back()->with('pesan', 'anda berasil registrasi');
+        // return response()->json($request->all());
     
     }
     public function pengaduan()
@@ -73,7 +80,7 @@ class MasyarakatController extends Controller
         
     }
     public function layout(){
-        return view('Masyarakat.LayoutMasyarakat');
+        return view('LayoutMasyarakat');
 
     }
     

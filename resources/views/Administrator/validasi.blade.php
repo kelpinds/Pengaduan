@@ -22,6 +22,7 @@
                                     <td>{{$item->id}}</td>
                                     <td>{{$item->nik}}</td>
                                     <td>{{$item->tgl_pengaduan}}</td>
+                                    <td>{{$item->level}}</td>
                                     <td>{{$item->isi_laporan}}</td>
                                     <td>
                                         <div class="d-flax gap-2 mb-2">

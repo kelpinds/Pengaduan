@@ -37,8 +37,8 @@ Route::prefix('masyarakat')->group(function(){
     Route::get('layout',[MasyarakatController::class,'layout']);
     Route::get('login',[MasyarakatController::class,'login']);
     Route::post('login',[MasyarakatController::class,'ceklogin']);
-    Route::get('register',[MasyarakatController::class,'register']);
-    Route::post('register',[MasyarakatController::class,'data']);
+    Route::get('registrasi',[MasyarakatController::class,'register']);
+    Route::post('registrasi',[MasyarakatController::class,'data']);
     Route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
     Route::post('pengaduan',[MasyarakatController::class,'cekpengaduan']);
     

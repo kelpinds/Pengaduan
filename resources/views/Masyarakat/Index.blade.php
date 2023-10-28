@@ -1,4 +1,4 @@
-@extends('LayoutMasyarakat')
+@extends('Layout')
 
 @section('title')
     Laporkan

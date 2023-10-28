@@ -13,7 +13,7 @@ class Masyarakat extends Otentikasi
     
     protected $table = "masyarakats";
 
-    protected $primaryKey = "id";
+    protected $primaryKey = "nik";
     public $incrementing="false";
     protected $keyType = "string";
     protected $guarded=[];

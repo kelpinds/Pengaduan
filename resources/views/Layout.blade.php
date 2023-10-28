@@ -12,57 +12,26 @@
 </head>
 
 <body>
-    <div id="main" class="d-flex vh-100">
-        <div id="sidebar" class="bg-light shadow">
-            <nav class="navbar navbar-dark bg-primary bg-gradient px-3">
-                <span class="navbar-brand fw-bold">
-                    <i class="bi bi-phone-vibrate-fill"></i>
-                    Lapor!!
-                </span>
-            </nav>
-            <div id="menu" class="mt-4 ">
-                <ul class="nav flex-column ">
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link active">
-                            <i class="bi bi-house-fill"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link ">
-                            <i class="bi bi-person-bounding-box"></i>
-                            Pengguna
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link ">
-                            <i class="bi bi-file-earmark-text-fill"></i>
-                            Aduan Masuk
-                        </a>
-                    </li>
-                    <li class="nav-item mb-1">
-                        <a href="#" class="nav-link ">
-                            <i class="bi bi-people-fill"></i>
-                            Data anggota
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="center">
-            <nav class="navbar navbar-dark bg-primary bg-gradient shadow-sm">
-                <div class="container-fluid">
-                    <span class="navbar-brand">@yield('title')</span>
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="/admin/logout" class="btn btn-danger">
-                                Sign Out
-                                <i class="bi bi-box-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-lg text-bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" >LAPOR!!</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" href="validasi">Validasi</a>
+                  <a class="nav-link active" href="tanggapan">Tanggapan</a>
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </div>
-            </nav>
+              </div>
+              <ul class="nav">
+                <li class="nav-item active"><a href="login" class="nav-link link-body-emphasis px-2">Login</a></li>
+                <li class="nav-item active"><a href="registrasi" class="nav-link link-body-emphasis px-2">Sig up</a></li>
+            </ul>
+            </div>
+          </nav>
             <div class="container-fluid mt-4">
                 @yield('content')
             </div>
