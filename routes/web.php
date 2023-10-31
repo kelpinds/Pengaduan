@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MasyarakatController;
+use App\Http\Middleware\Masyarakatmiddleware;
 use App\Http\Middleware\validasiAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +34,7 @@ Route::prefix('admin')->group(function(){
 Route::prefix('masyarakat')->group(function(){
     Route::get('/',function(){
         return view('Masyarakat.index');
-    })->middleware(validasiAdmin::class);
+    })->middleware(Masyarakatmiddleware::class);
     Route::get('layout',[MasyarakatController::class,'layout']);
     Route::get('login',[MasyarakatController::class,'login']);
     Route::post('login',[MasyarakatController::class,'ceklogin']);

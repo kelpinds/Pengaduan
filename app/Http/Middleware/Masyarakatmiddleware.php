@@ -14,7 +14,10 @@ class Masyarakatmiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {
+    {   
+        if(!session('username')){
+            return redirect('masyarakat/login');
+        }
         return $next($request);
     }
 }
