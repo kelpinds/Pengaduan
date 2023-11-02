@@ -25,10 +25,12 @@ Route::prefix('admin')->group(function(){
     })->middleware(validasiAdmin::class);
     Route::get('login',[AdminController::class,'login']);
     Route::post('login',[AdminController::class,'ceklogin']);
-    Route::get('register',[AdminController::class,'register']);
-    Route::post('register',[AdminController::class,'data']);
+    Route::get('registrasi',[AdminController::class,'register']);
+    Route::post('registrasi',[AdminController::class,'data']);
     Route::get('validasi',[AdminController::class,'validasi']);
-
+    Route::get('logout',[AdminController::class,'logout']);
+    Route::get('dass',[AdminController::class,'dass']);
+    Route::get('layout',[AdminController::class,'layout']);
 });
 
 Route::prefix('masyarakat')->group(function(){
@@ -42,6 +44,8 @@ Route::prefix('masyarakat')->group(function(){
     Route::post('registrasi',[MasyarakatController::class,'data']);
     Route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
     Route::post('pengaduan',[MasyarakatController::class,'cekpengaduan']);
+    Route::get('logout',[MasyarakatController::class,'logout']);
+    Route::get('dass',[MasyarakatController::class,'dass']);
     
 });
 

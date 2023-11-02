@@ -34,15 +34,7 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                            <div class="mb-3">
-                                <label for="tgl_pengaduan" class="form-label">Tanggal Pengaduan</label>
-                                <input type="date" class="form-control" name="tgl_pengaduan" id="tgl_pengaduan"
-                                    placeholder="tgl_pengaduan">
-                                @error('tgl_pengaduan')
-                                    <div class="form-text">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                            
                             </div>
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Foto</label>

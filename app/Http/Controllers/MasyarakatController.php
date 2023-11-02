@@ -22,7 +22,6 @@ class MasyarakatController extends Controller
             ]);
             return redirect('/masyarakat/layout');
         }
-        return back();
     }   
     public function logout(){
         session()->flush();
@@ -58,23 +57,25 @@ class MasyarakatController extends Controller
         return view('Masyarakat.pengaduan');
     }
     public function cekpengaduan(Request $request){
-        //  $foto = $request->file('foto');
-
-        //  $folder = 'upload';
-
-        //  $foto->move($folder,$foto->getClientOriginalName());
-        $s = $request->validate([
-            'nik'=>'required|max:16',
-            'tgl_pengaduan'=>'required|date',
-            'foto'=>'required',
-            'isi_laporan'=>'required'
-        ]);
         $k =new Pengaduan();
+          $foto = $request->file('foto');
+
+          $folder = 'upload';
+
+          $foto->move($folder,$foto->getClientOriginalName());
+        // $s = $request->validate([
+        //     'nik'=>'required|max:16',
+        //     'tgl_pengaduan'=>'required|date',
+        //     'foto'=>'required',
+        //     'isi_laporan'=>'required'
+      //  ]);
+        
         $k->create([
-            'nik'=>$request->nik,
-            'tgl_pengaduan'=>$request->tgl_pengaduan,
-            'foto'=>$request->foto,
-            'isi_laporan'=>$request->isi_laporan
+            'nik'=>$request->input('nik'),
+            'tgl_pengaduan'=>date('y-m-d'),
+            'foto'=>$foto->getClientOriginalName(),
+            'isi_laporan'=>$request->input('isi_laporan'),
+            'status'=>'0'
         ]);
         return back()->with('pesan','laporan berhasil dikirim');
         
@@ -83,6 +84,7 @@ class MasyarakatController extends Controller
         return view('LayoutMasyarakat');
 
     }
+   
     
 
 }

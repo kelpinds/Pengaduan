@@ -27,25 +27,29 @@ class AdminController extends Controller
     }   
     public function logout(){
         session()->flush();
-        return back();
+        return  redirect('admin/login');
     }
     public function register(){
         return view("Administrator.registrasi");
     }
     public function data(Request $request){
-        $c = new Petugas();
+       
         $cek = $request->validate([
-            'nama_petugas' => 'required|max:16',
+            'nama_petugas' => 'required',
             'username' => 'required|min:6',
             'password' => 'required|min:4',
-            'telp' => 'required|max:13',
-            'level' => 'required'
+            'level' => 'required',
+            'telp' => 'required|max:13'
         ]);
-        $c->create($request->all());
-       
-    
-        return back()->with('Pesan', 'anda berasil registrasi');
-    
+        $c = new Petugas();
+        $c->create([
+            'nama_petugas'=>$request->nama_petugas,
+            'username'=>$request->username,
+            'password'=>$request->password,
+            'level'=>$request->level,
+            'telp'=>$request->telp
+        ]);
+        return back()->with('pesan', 'anda berasil registrasi');
     }
     public function pengaduan()
     {
@@ -56,5 +60,5 @@ class AdminController extends Controller
         return view('Administrator.validasi',['data'=>$lapor->all()]);
 
     }
-
+    
 }

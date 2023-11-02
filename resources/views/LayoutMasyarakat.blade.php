@@ -20,15 +20,17 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="LayoutMasyarakat">Home</a>
               <a class="nav-link" href="#">Pengaduan</a>
-              <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </div>
           </div>
+          <ul class="nav">
+            <li class="nav-item active"><a href="{{url('masyarakat/logout')}}" class="nav-link link-body-emphasis px-2">Logout</a></li>
+        </ul>
         </div>
       </nav>
-
+      <h3 style="text-align: center">Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h3>
+      <button haref="pengaduan">Laporkan</button>
     @yield('content')
 
     <script src="/js/bootstrap.bundle.min.js"></script>

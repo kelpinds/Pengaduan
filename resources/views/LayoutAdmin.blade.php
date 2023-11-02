@@ -19,14 +19,17 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="LayoutAdmin">Home</a>
               <a class="nav-link active" href="validasi">Validasi</a>
               <a class="nav-link active" href="tanggapan">Tanggapan</a>
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </div>
           </div>
+          <ul class="nav">
+            <li class="nav-item active"><a href="registrasi" class="nav-link link-body-emphasis px-2">Logout</a></li>
+        </ul>
         </div>
       </nav>
+     
       @yield('content')
       
       <script src="/js/bootstrap.bundle.min.js"></script>

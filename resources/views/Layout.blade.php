@@ -20,10 +20,9 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link active" href="validasi">Validasi</a>
-                  <a class="nav-link active" href="tanggapan">Tanggapan</a>
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  <a class="nav-link active" aria-current="page" href="admid/Layout">Home</a>
+                  <a class="nav-link active" href="admin/validasi">Validasi</a>
+                  <a class="nav-link active" href="admin/tanggapan">Tanggapan</a>
                 </div>
               </div>
               <ul class="nav">
