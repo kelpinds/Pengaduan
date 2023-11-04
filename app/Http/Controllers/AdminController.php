@@ -36,7 +36,7 @@ class AdminController extends Controller
        
         $cek = $request->validate([
             'nama_petugas' => 'required',
-            'username' => 'required|min:6',
+            'username' => 'required|min:3',
             'password' => 'required|min:4',
             'level' => 'required',
             'telp' => 'required|max:13'
@@ -60,5 +60,14 @@ class AdminController extends Controller
         return view('Administrator.validasi',['data'=>$lapor->all()]);
 
     }
-    
+    public function index(){
+        $lapor = new pengaduan;
+        return view('Administrator.index',['data'=>$lapor->all()]);
+
+    }
+    public function status($id){
+        $status = new Pengaduan;
+        $status->find($id)->update(['status'=>'proses']);
+        return back();
+    }
 }

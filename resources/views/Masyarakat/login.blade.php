@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login | masyarakat</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
+    <style>
+        #main .card{
+            max-width: 400px;
+        }
+    </style>
 </head>
 <body>
     <div id="main" class="d-flex vh-100 align-items-center text-bg-primary">

@@ -20,14 +20,14 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="admid/Layout">Home</a>
+                  <a class="nav-link active" aria-current="page" href="admid">Home</a>
                   <a class="nav-link active" href="admin/validasi">Validasi</a>
-                  <a class="nav-link active" href="admin/tanggapan">Tanggapan</a>
+                  <a class="nav-link active" href="tanggapan">Tanggapan</a>
                 </div>
               </div>
               <ul class="nav">
-                <li class="nav-item active"><a href="login" class="nav-link link-body-emphasis px-2">Login</a></li>
-                <li class="nav-item active"><a href="registrasi" class="nav-link link-body-emphasis px-2">Sig up</a></li>
+                <li class="nav-item active"><a href="masyarakat/login" class="nav-link link-body-emphasis px-2">Login</a></li>
+                <li class="nav-item active"><a href="masyarakat/logout" class="nav-link link-body-emphasis px-2">Sig up</a></li>
             </ul>
             </div>
           </nav>

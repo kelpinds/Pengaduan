@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MasyarakatController extends Controller
 {
     public function login(){
-        return view("Administrator.Login");
+        return view("masyarakat.Login");
     }
     public function ceklogin(Request $request){
         $s = new Masyarakat();
@@ -25,7 +25,7 @@ class MasyarakatController extends Controller
     }   
     public function logout(){
         session()->flush();
-        return back();
+        return redirect('/mayarakat/login');
     }
     public function register(){
         return view("Masyarakat.registrasi");
@@ -35,7 +35,7 @@ class MasyarakatController extends Controller
         $cek = $request->validate([
             'nik' => 'required|max:16',
             'nama' => 'required',
-            'username' => 'required|min:6',
+            'username' => 'required|min:3',
             'password' => 'required|min:4',
             'telp' => 'required|max:13'
         ]);

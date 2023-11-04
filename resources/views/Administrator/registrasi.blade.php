@@ -28,7 +28,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="nama_petugas" class="form-label">Nama Petugas</label>
-                            <input type="text" class="form-control" name="nama_petugas" id="nama_petugas" placeholder="nama">
+                            <input type="text" class="form-control" name="nama_petugas" id="nama_petugas" placeholder="nama_Petugas">
                             @error('nama_petugas')
                                 <div class="form-text">
                                     {{ $message }}
@@ -79,7 +79,9 @@
                         @enderror
                     </div>
                             <button class="btn form-control btn-primary mb-2">Register</button>
-                            <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button>
+                            <button class="btn form-control btn-outline-success mb-2" type="reset">Batal</button><br>
+                            <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login"
+                                class="fw-bold text-body"><u>Login here</u></a></p>
                     </form>
                 </div>
             </div>

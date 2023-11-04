@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/layout/css/style.css">
 </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg text-bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" >LAPOR!!</a>
@@ -19,12 +18,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="LayoutAdmin">Home</a>
-              <a class="nav-link active" href="validasi">Validasi</a>
+              <a class="nav-link active" href="{{url('/admin/index')}}">Home</a>
+              <a class="nav-link active" href="{{url('/admin/validasi')}}">Validasi</a>
               <a class="nav-link active" href="tanggapan">Tanggapan</a>
             </div>
           </div>
           <ul class="nav">
+            <li class="nav-item active"><a href="masyarakat/login" class="nav-link link-body-emphasis px-2">Login</a></li>
             <li class="nav-item active"><a href="registrasi" class="nav-link link-body-emphasis px-2">Logout</a></li>
         </ul>
         </div>

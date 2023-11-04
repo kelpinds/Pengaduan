@@ -28,9 +28,8 @@ Route::prefix('admin')->group(function(){
     Route::get('registrasi',[AdminController::class,'register']);
     Route::post('registrasi',[AdminController::class,'data']);
     Route::get('validasi',[AdminController::class,'validasi']);
-    Route::get('logout',[AdminController::class,'logout']);
-    Route::get('dass',[AdminController::class,'dass']);
-    Route::get('layout',[AdminController::class,'layout']);
+    Route::get('index',[AdminController::class,'index']);
+    Route::get('status/{id}',[AdminController::class,'status']);
 });
 
 Route::prefix('masyarakat')->group(function(){
@@ -45,7 +44,7 @@ Route::prefix('masyarakat')->group(function(){
     Route::get('pengaduan',[MasyarakatController::class,'pengaduan']);
     Route::post('pengaduan',[MasyarakatController::class,'cekpengaduan']);
     Route::get('logout',[MasyarakatController::class,'logout']);
-    Route::get('dass',[MasyarakatController::class,'dass']);
+
     
 });
 
