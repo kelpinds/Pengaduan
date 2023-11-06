@@ -17,10 +17,8 @@ class AdminController extends Controller
         $s= $s->where ('username',$request->input('username'))->where('password',$request->input('password'));
 
         if($s->exists()){
-            session([
-                'username'=>$request->input('username'),
-                'password'=>$request->input('password')
-            ]);
+            $admin = $s->first();
+            session(['admin'=>$admin]);
             return redirect('/admin');
         }
         return back();

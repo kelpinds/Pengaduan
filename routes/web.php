@@ -47,8 +47,3 @@ Route::prefix('masyarakat')->group(function(){
 
     
 });
-
-// Route masyarakat
-Route::get('/', function () {
-    return view('Masyarakat.Index');
-});

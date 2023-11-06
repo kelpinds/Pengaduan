@@ -39,4 +39,3 @@
 </body>
 
 </html>
-position-absolute bottom-50 end-50
